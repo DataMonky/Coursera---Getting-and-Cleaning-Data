@@ -13,3 +13,5 @@ Things that I have tried: <br />
 2. I also tried two functions make.names(), and tolower(), after reading forum and googling around <br />
 3. Perhaps I need to do some column name cleaning <br />
 
+Step 5 is not done due to time
+
