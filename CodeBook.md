@@ -5,6 +5,7 @@
 4. Give column names (It is useful for merging/linking activity_labels to major data set)
 5. Merging two data set together
 6. Filter out only 'mean' and 'std' measurements
+7. Group by activity and summarise the data to get the average value for each measurment
 
 ##Variables definition
 1. train.x.df: variable to hold data reaad from "train/X_train.txt"
@@ -36,3 +37,7 @@ names(activity.labels) <- c("activity.id", "activity.name")
 ##Uses descriptive activity names to name the activities in the data set
 Merge activity_labels and merge.df to add 'activity.name' accordingly to make the data set more readable
 
+##Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+1. group data set by activity_name //by_activty <- group_by(merge.df.narrow, activity.name)
+2. remove 'activity.id' column //by_activty <- select(by_activty, -(activity.id))
+3. calculate average of each variable //summarise_each(by_activty, funs(mean))
