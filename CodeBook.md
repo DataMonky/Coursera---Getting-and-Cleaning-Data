@@ -6,6 +6,7 @@
 5. Merging two data set together
 6. Filter out only 'mean' and 'std' measurements
 7. Group by activity and summarise the data to get the average value for each measurment
+8. Write data into a .txt file
 
 ##Variables definition
 1. train.x.df: variable to hold data reaad from "train/X_train.txt"
@@ -20,7 +21,7 @@
 10. activity: variable to hold activity id and name columns from merged.df
 11. means: variable to hold measurement columns with 'mean' in the name
 12. stds: variable to hold measurement columns with 'std' in the name
-13. merge.df.narrow: variable to hold filterd columns only from activity, means, and stds
+13. result: variable to hold the final summarised tidy data
 
 ##Give meaningful column names
 Because y_train and y_test data set data ranges 1 to 6, looks mapping to activity_labels data set
