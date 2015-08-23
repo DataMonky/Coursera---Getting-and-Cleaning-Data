@@ -1,1 +1,31 @@
+##List of work done
+1. Load library dplyr
+2. Read data from .txt to variables (I used .df to refer to 'Data.Frame')
+3. Row combine and Column combine
+4. Give column names (It is useful for merging/linking activity_labels to major data set)
+5. Merging two data set together
+
+##Variables definition
+1. train.x.df: variable to hold data reaad from "train/X_train.txt"
+2. test.x.df variable to hold data reaad from "test/X_test.txt"
+3. train.y.df variable to hold data reaad from "train/y_train.txt"
+4. test.y.df variable to hold data reaad from "test/y_test.txt"
+5. features variable to hold data reaad from "features.txt"
+6. activity.labels variable to hold data reaad from "activity_labels.txt"
+7. train.df variable to hold column-combined data for trainig data set
+8. test.df variable to hold column-combined data for testing data set
+9. merge.df variable to hold row-combined data from 'train' and 'test' data set
+
+##Give meaningful column names
+Because y_train and y_test data set data ranges 1 to 6, looks mapping to activity_labels data set
+1. names(train.y.df) <- "activity_id"
+2. names(test.y.df) <- "activity_id"
+
+Because X.train and X.test data set have the same number of rows as data set in features data set, looks mapping
+1. names(train.x.df) <- features$V2
+2. names(test.x.df) <- features$V2
+
+This naming is for Step 3, which rquires names to be descriptive and need to link to the main data set
+names(activity.labels) <- c("activity.id", "activity.name")
+
 
