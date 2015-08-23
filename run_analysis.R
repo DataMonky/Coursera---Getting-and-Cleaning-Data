@@ -38,4 +38,10 @@ merge.df <- rbind(train.df, test.df)
 ##Uses descriptive activity names to name the activities in the data set
 merge.df <- merge(activity.labels, merge.df, by.x = "activity.id", by.y = "activity_id")
 
+##Step 2: After another try, select-contains is working
+activity <- select(merge.df, 1:2)
+means <- select(merge.df, contains("mean"))
+stds <- select(merge.df, contains("std"))
+merge.df.narrow <- cbind(activity, means, stds)
+
 
