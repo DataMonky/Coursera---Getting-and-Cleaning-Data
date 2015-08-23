@@ -48,3 +48,6 @@ merge.df.narrow <- cbind(activity, means, stds)
 by_activty <- group_by(merge.df.narrow, activity.name)
 by_activty <- select(by_activty, -(activity.id))
 result <- summarise_each(by_activty, funs(mean))
+
+##write into a .txt file
+write.table(result, file = "merged_narrow_summary.txt", row.name=FALSE)
