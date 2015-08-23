@@ -41,3 +41,4 @@ Merge activity_labels and merge.df to add 'activity.name' accordingly to make th
 1. group data set by activity_name //by_activty <- group_by(merge.df.narrow, activity.name)
 2. remove 'activity.id' column //by_activty <- select(by_activty, -(activity.id))
 3. calculate average of each variable //summarise_each(by_activty, funs(mean))
+Note: summarise_each can directly apply the selected function to all columns, so there is no need to specific each column
