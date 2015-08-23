@@ -66,4 +66,4 @@ merge.df.narrow <- cbind(activity, means, stds)
 //Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 by_activty <- group_by(merge.df.narrow, activity.name)
 by_activty <- select(by_activty, -(activity.id))
-summarise_each(by_activty, funs(mean))
+result <- summarise_each(by_activty, funs(mean))
