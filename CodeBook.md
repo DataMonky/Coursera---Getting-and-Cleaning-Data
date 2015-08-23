@@ -28,5 +28,5 @@ Because X.train and X.test data set have the same number of rows as data set in 
 This naming is for Step 3, which rquires names to be descriptive and need to link to the main data set
 names(activity.labels) <- c("activity.id", "activity.name")
 
-##MUses descriptive activity names to name the activities in the data set
+##Uses descriptive activity names to name the activities in the data set
 Merge activity_labels and merge.df to add 'activity.name' accordingly to make the data set more readable
