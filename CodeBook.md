@@ -4,17 +4,22 @@
 3. Row combine and Column combine
 4. Give column names (It is useful for merging/linking activity_labels to major data set)
 5. Merging two data set together
+6. Filter out only 'mean' and 'std' measurements
 
 ##Variables definition
 1. train.x.df: variable to hold data reaad from "train/X_train.txt"
-2. test.x.df variable to hold data reaad from "test/X_test.txt"
-3. train.y.df variable to hold data reaad from "train/y_train.txt"
-4. test.y.df variable to hold data reaad from "test/y_test.txt"
-5. features variable to hold data reaad from "features.txt"
-6. activity.labels variable to hold data reaad from "activity_labels.txt"
-7. train.df variable to hold column-combined data for trainig data set
-8. test.df variable to hold column-combined data for testing data set
-9. merge.df variable to hold row-combined data from 'train' and 'test' data set
+2. test.x.df: variable to hold data reaad from "test/X_test.txt"
+3. train.y.df: variable to hold data reaad from "train/y_train.txt"
+4. test.y.df: variable to hold data reaad from "test/y_test.txt"
+5. features: variable to hold data reaad from "features.txt"
+6. activity.labels: variable to hold data reaad from "activity_labels.txt"
+7. train.df: variable to hold column-combined data for trainig data set
+8. test.df: variable to hold column-combined data for testing data set
+9. merge.df: variable to hold row-combined data from 'train' and 'test' data set
+10. activity: variable to hold activity id and name columns from merged.df
+11. means: variable to hold measurement columns with 'mean' in the name
+12. stds: variable to hold measurement columns with 'std' in the name
+13. merge.df.narrow: variable to hold filterd columns only from activity, means, and stds
 
 ##Give meaningful column names
 Because y_train and y_test data set data ranges 1 to 6, looks mapping to activity_labels data set
@@ -30,3 +35,4 @@ names(activity.labels) <- c("activity.id", "activity.name")
 
 ##Uses descriptive activity names to name the activities in the data set
 Merge activity_labels and merge.df to add 'activity.name' accordingly to make the data set more readable
+
